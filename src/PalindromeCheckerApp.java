@@ -53,7 +53,7 @@ public class PalindromeCheckerApp {
 
         // Compare characters from queue and stack
         while (!queue.isEmpty()) {
-            if (queue.remove() != stack.pop()) {
+            if (!Objects.equals(queue.remove(), stack.pop())) {
                 isPalindrome = false;
                 break;
             }
